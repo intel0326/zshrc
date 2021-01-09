@@ -1,7 +1,7 @@
 # Created by newuser for 5.4.2
 #変更後はコンパイル
 #$ zcompile ~/.zshrc
-#設定
+#設定 
 #$ source ~/.zshrc
 
 #コマンド
