@@ -237,8 +237,8 @@ function naop() {
 
 #ls
 #alias ls="ls -F --color=auto -v"#ディレクトリには/, 色つき, 番号順
-alias la="ls -a"#隠しファイルも
-alias ll="ls -lh"#詳細付き, ファイルサイズに接頭語
+#alias la="ls -a"#隠しファイルも
+alias ll="ls -l" #詳細付き, ファイルサイズに接頭語
 alias lla="ls -lha"#全部詳細
 # Mac用のls
 alias ls="ls -G"
@@ -252,7 +252,7 @@ alias -g sl="echo you are an idiot!"
 
 #打ち間違い対策
 alias s="ls"
-alias l="ls"
+alias l="ls -l"
 
 #grep
 #alias grep="grep --color=auto"
