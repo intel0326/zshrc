@@ -310,8 +310,10 @@ alias br='brew'
 alias tree='tree -N'
 
 #vscodeをvsで開きたい
-#alias vscode='code'
-alias vscode='/Applications/Visual\ Studio\ Code\ -\ Exploration.app/Contents/Resources/app/bin/code'
+alias vscode='code'
+#alias vscode='/Applications/Visual\ Studio\ Code\ -\ Exploration.app/Contents/Resources/app/bin/code'
+#alias vscode='code-exploration'
+
 
 ####################
 ### キーバインド ###
@@ -391,6 +393,9 @@ export PATH=/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin
 
 # homebrew用パス
 export PATH=$PATH:/opt/homebrew/bin
+
+# mysql
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
