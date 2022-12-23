@@ -1,7 +1,7 @@
 # Created by newuser for 5.4.2
 #変更後はコンパイル
 #$ zcompile ~/.zshrc
-#設定 
+#設定
 #$ source ~/.zshrc
 
 #コマンド
@@ -84,13 +84,13 @@ export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
 #黒赤緑黄青紫水白
 #local BLACK=$'%{\e[1;30m%}'
 #local RED=$'%{\e[1;31m%}'
-local GREEN=$'%{\e[1;32m%}'
+local GREEN=$'%{\e[32m%}'
 #local YELLOW=$'%{\e[1;33m%}'
 local BLUE=$'%{\e[1;34m%}'
 #local PURPLE=$'%{\e[1;35m%}'
 #local LIGHTBLUE=$'%{\e[1;36m%}'
 #local WHITE=$'%{\e[1;37m%}'
-local DEFAULT=$'%{\e[1;m%}'
+local DEFAULT=$'\e[m'
 #%nユーザー名
 #%Mコンピュータ名
 #%cカレントディレクトリ
@@ -237,7 +237,7 @@ function naop() {
 
 #ls
 #alias ls="ls -F --color=auto -v"#ディレクトリには/, 色つき, 番号順
-#alias la="ls -a"#隠しファイルも
+alias la="ls -a"#隠しファイルも
 alias ll="ls -l" #詳細付き, ファイルサイズに接頭語
 alias lla="ls -lha"#全部詳細
 # Mac用のls
@@ -311,9 +311,9 @@ alias tree='tree -N'
 
 #vscodeをvsで開きたい
 alias vscode='code'
-#alias vscode='/Applications/Visual\ Studio\ Code\ -\ Exploration.app/Contents/Resources/app/bin/code'
-#alias vscode='code-exploration'
 
+#git statusを短くしたい
+alias g='git status'
 
 ####################
 ### キーバインド ###
@@ -382,6 +382,21 @@ setopt noautoremoveslash
 
 #出力の文字列末尾に改行コードが無い場合でも表示
 unsetopt promptcr
+
+
+############
+## その他 ##
+############
+
+# iterm2 shell統合
+# https://www.rasukarusan.com/entry/2019/04/13/180443
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# fzf (command-line fuzzy finder)
+# https://ottan.jp/posts/2019/05/terminal-zsh-customize/
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 
 ##############
