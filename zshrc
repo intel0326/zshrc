@@ -430,3 +430,6 @@ unset __conda_setup
 
 # nodeのバージョンマネージャーのパス
 eval "$(anyenv init -)"
+
+# pyenvのパス
+eval "$(pyenv init -)"
